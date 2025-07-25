@@ -1,0 +1,129 @@
+body .ssm-flat-modal {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #222;
+}
+#ssm-frontend-overlay {
+    position: fixed; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.03);
+    z-index: 9999999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    flex-direction: column;
+    padding: 100px 0;
+}
+#ssm-frontend-overlay-content {
+    background: #fff;
+    box-shadow: 0 1px 9px 0 #bbb;
+    border-radius: 16px;
+    padding: 24px 28px;
+    min-width: 660px;
+    min-height: 420px;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#ssm-overlay-close {
+    position: absolute; right: 18px; top: 18px;
+    font-size: 20px;
+    border: 0; background: none; cursor: pointer; color: #888;
+}
+#ssm-flat-header {
+    font-size: 18px; margin-bottom: 10px; font-weight: 500;
+}
+
+#ssm-flat-controls {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#ssm-flat-controls label {
+    margin-right: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.ssm-flat-box {
+    background: #fafbfc;
+    border: 1.5px solid #ddd;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    padding: 16px 18px 40px 15px;
+    width: 100%;
+    min-height: 98px;
+    min-width: 280px;
+    font-size: 15px;
+    overflow-y: scroll;
+}
+#ssm-flat-scripts-label, #ssm-flat-styles-label {
+    font-weight: 500; margin-bottom: 7px;
+}
+.ssm-duplicate-flag {
+    color: #c33632; font-weight: bold; margin-left: 5px;
+}
+.jstree-anchor.ssm-duplicate-highlight {
+    background: #ffeceb !important;
+    border-left: 3px solid #c33632 !important;
+    font-weight: 600;
+}
+
+/* Duplicate info panel, positioned inside card top-right */
+.ssm-duplicate-info-panel {
+    display: none;
+    box-shadow: 0 1px 12px #eee;
+    background: #fff;
+    border: 1.5px solid #ddd;
+    border-radius: 13px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 260px;
+    min-height: 120px;
+    z-index: 10;
+    padding: 10px 17px 9px 12px;
+    animation: ssm-slidein 0.17s cubic-bezier(.5,.55,.75,1.2);
+}
+@keyframes ssm-slidein {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+.ssm-duplicate-info-panel.active {
+    display: block;
+}
+.ssm-duplicate-info-panel h3 {
+    font-size: 14px;
+    margin: 0 0 7px 0;
+    font-weight: 600;
+}
+.ssm-duplicate-list {
+    padding: 0; margin: 0; list-style: none;
+}
+.ssm-duplicate-list li {
+    margin: 0; padding: 4px 0; word-break: break-word;
+}
+.ssm-dup-panel-close {
+    border: 0; background: transparent;
+    position: absolute; top: 4px; right: 7px;
+    font-size: 18px; color: #aaa;
+    cursor: pointer;
+}
+.ssm-dup-panel-close:hover {
+    color: #c33632;
+}
+#ssm-duplicate-filter {
+    accent-color: #c33632; /* Red color to highlight when checked */
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+#ssm-duplicate-filter:focus {
+    outline: 2px solid #a83232;
+    outline-offset: 2px;
+}
