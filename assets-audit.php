@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Script & Style Dependency Mapper (Wireframe-style, Duplicates, Panel Inside Cards)
-Description: Visualizes enqueued scripts/styles with dependency trees and contextual duplicates slide panels inside respective tree cards.
-Version: 2.2
+Plugin Name: Assets Audit
+Description: Visualizes enqueued scripts and styles with dependency trees and contextual duplicates slide panels inside respective tree cards.
+Version: 1.0
 Author: Your Name
 License: GPL2
 */
@@ -23,11 +23,11 @@ class Script_Style_Mapper {
     public function add_admin_bar_node($wp_admin_bar) {
         if (!is_user_logged_in() || !current_user_can('manage_options')) return;
         $wp_admin_bar->add_node([
-            'id'    => 'script_style_mapper_view',
-            'title' => 'Script & Style Mapper',
+            'id'    => 'assets_audit_view',
+            'title' => 'Assets Audit',
             'href'  => '#',
             'meta'  => [
-                'class' => 'script-style-mapper-admin-bar',
+                'class' => 'assets-audit-admin-bar',
                 'title' => 'View currently loaded scripts and styles',
                 'onclick' => 'event.preventDefault(); ScriptStyleMapperFrontend.toggleOverlay();',
             ]
