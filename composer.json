@@ -1,0 +1,16 @@
+{
+	"name": "nanisamireddy/assets-audit",
+	"type": "project",
+	"license": "GPL-2.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"AssetsAudit\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "nani-samireddy",
+			"email": "nanisamireddy05@gmail.com"
+		}
+	]
+}
